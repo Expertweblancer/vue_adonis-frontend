@@ -2,27 +2,51 @@
     <v-card
     color="grey lighten-4"
     flat
-    height="200px"
     tile
   >
-    <v-toolbar dense>
+    <v-toolbar dense dark color="primary">
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Title</v-toolbar-title>
-
+      <v-toolbar-title>ProjectVizion</v-toolbar-title>
+      <v-item-group>
+        <v-item>
+            <v-btn text>
+                <v-icon class="pr-2">mdi-file-tree</v-icon>
+                    Projects
+            </v-btn>
+        </v-item>
+      </v-item-group>
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
+      <v-btn to="/login" text>
+        <v-icon class="pr-2">mdi-fingerprint</v-icon>
+        Login
+
       </v-btn>
 
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
+      <v-btn text>
+        <v-icon class="pr-2">mdi-location-exit</v-icon>
+        Sign Out
       </v-btn>
 
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
+      <v-btn text>
+        <v-icon class="pr-2">mdi-account</v-icon>
+        My Account
       </v-btn>
     </v-toolbar>
   </v-card>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            login: '/login'
+        }
+    }
+}
+</script>
+<style>
+    button{
+        margin-left: 5px;
+    }
+</style>
